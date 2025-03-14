@@ -12,5 +12,13 @@
         mvn compile
         mvn spring-boot:run
 
-    Para probar usar: 
-        http://localhost:8080/api/saludo
+    Esto deja corriendo un servidor en la 8080 del contenedor.
+    Para probar usar:
+
+        curl -X GET http://localhost:8080/api/check
+
+        curl -X POST "http://localhost:8080/api/validate" \
+            -H "Content-Type: application/json" \
+            -d '{"nombre": "Mariano", "password": "1234"}'
+
+
